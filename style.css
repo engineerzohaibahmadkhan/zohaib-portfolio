@@ -14,3 +14,31 @@ body {
   background-repeat: no-repeat;
   color: white;
 }
+
+header {
+  height: 80px;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.nav {
+  height: 60px;
+  /* padding: 0.7rem; */
+  margin: 0;
+}
+
+.nav-bar {
+  height: 40px;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  gap: 2rem;
+  padding: 0;
+}
