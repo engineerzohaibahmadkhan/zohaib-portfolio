@@ -1,0 +1,11 @@
+/* Merriweather for specific writing*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: "Alan Sans", sans-serif;
+    background: radial-gradient(ellipse 75% 100% at top center, #000000 70%, #7b2cbf 100%);
+}
