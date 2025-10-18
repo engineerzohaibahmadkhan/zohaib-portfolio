@@ -36,15 +36,15 @@ nav, ul{
     list-style: none;
     
 }
-a{
+.nav-a{
     color: rgb(214, 212, 212);
     text-decoration: none;
     font-family: "Merriweather", Alan Sans;
     border: 1px solid transparent;
-    transition-duration: 500ms;
+    transition-duration: 0.5s;
     transition-property: padding;
 }
-a:hover{
+.nav-a:hover{
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 5px;
@@ -107,35 +107,100 @@ h2{
 }
 .tech-stack{
     margin-top: 100px;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-}
-.techstack-h{
-    height: fit-content;
-    width: fit-content;
+    gap: 3rem;
 }
 .th{
     color: rgb(214, 212, 212);
+    font-size: 40px;
 }
 .techstack-items{
-    height: 350px;
-    width: 850px;
+    height: 470px;
+    width: 1100px;
     /* border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3); */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
 }
 .item{
-    height: 110px;
-    width: 110px;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: rgb(214, 212, 212);
+    transition-duration: 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 12px rgba(123, 44, 191, 0.5),
+                0 2px 4px rgba(123, 44, 191, 0.3);
+    border-radius: 12px;
+}
+.item:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.icons{
+    height: 130px;
+    width: 130px;
+}
+.address-parent{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.addresses{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
     border-radius: 10px;
+    
+}
+.ad-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+
+}
+i{
+    font-size: 45px;
+    color: #9e9d9d;
+    transition-duration: 0.5s;
+}
+i:hover{
+    color: white;
+    transform: scale(1.1);
+}
+.mail-a{
+    background: linear-gradient(45deg, #7b2cbf, #000000);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px 4px rgba(163, 76, 250, 0.5);
+    border-radius: 7px;
+    text-decoration: none;
+    color: rgb(214, 212, 212);
+    transition-duration: 0.5s;
+}
+.mail-a{
+    transform: scale(1.1);
 }
