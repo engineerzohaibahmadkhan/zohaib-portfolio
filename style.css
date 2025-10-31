@@ -5,7 +5,8 @@
 }
 body{                   /*this is for body*/
     font-family: "Alan Sans", sans-serif;
-    background: radial-gradient(ellipse 75% 100% at top center, #000000 70%, #7b2cbf 100%);
+    /* background: radial-gradient(ellipse 75% 100% at top center, #000000 70%, #7b2cbf 100%); */
+    background-image: url(images/ChatGPTimage.png);
     background-attachment: fixed; /* keeps the background fixed while scrolling */
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -23,37 +24,68 @@ header{                 /*this is for header*/
     left: 0;
     top: 0;
     background-color: transparent;
-    box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
 }
-nav, ul{                    /*this is for navigation list in the header*/
-    height: 70px;
-    width: 60%;
+.navbar {
+    height: 45px;
+    width: 600px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    justify-content: space-around;
-    list-style: none;
-    
-}
-.nav-a{                             /*this is for the anchor links in the navigation bar*/
-    color: rgb(214, 212, 212);
-    text-decoration: none;
-    font-family: "Merriweather", Alan Sans;
-    border: 1px solid transparent;
-    transition-duration: 0.5s;
-    transition-property: padding;
-}
-.nav-a:hover{                   /*this is for the anchor links hover effects in the navigation bar*/
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-color: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    background-color: #011924;
+    box-shadow: 0 4px 20px rgba(194, 194, 194, 0.1);
     border-radius: 10px;
-    cursor: pointer;
-    color: #7b2cbf;
+
 }
 
+/* List style */
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.nav-items a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Hover glow effect */
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-items a:hover {
+  color: #b983ff;
+}
+
+.nav-items a:hover::after {
+  width: 100%;
+}
+
+/* Active link (optional) */
+.nav-items a.active {
+  color: #c77dff;
+}
+
+.nav-items a.active::after {
+  width: 100%;
+}
 .introduction{                  /*this is for the introduction*/
     margin-top: 80px;
     height: 400px;
@@ -64,8 +96,8 @@ nav, ul{                    /*this is for navigation list in the header*/
     align-items: center;
 }
 .introduction-details{              /*this is related to introduction*/
-    height: 300px;
-    width: 800px;
+    height: 340px;
+    width: 900px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
@@ -73,39 +105,34 @@ nav, ul{                    /*this is for navigation list in the header*/
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #0c0c0c;
+    background-color: #011018;
 }
 .introduction-heading{                  /*this is related to introduction*/
-    color: #7b2cbf;
+    color: #05a3be;
     font-size: xx-large;
 }
 .introduction-paragraph{                     /*this is related to introduction*/
-    height: 120px;
-    width: 750px;
-    font-size: 17px;
+    height: 180px;
+    width: 770px;
+    font-size: 20px;
     text-align: justify;
     color: rgb(214, 212, 212);
 }
 .introduction-image{                                 /*this is related to introduction*/
     height: 340px;
-    width: 270px;
+    width: 310px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
-    background-color: #0c0c0c;
+    background-image: url(images/my-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.my-introduction-image{                              /*this is related to introduction*/
-    height: 310px;
-    width: 310px;
-    transition-duration: 500ms;
-}
-.my-introduction-image:hover{                                 /*this is related to introduction*/
-    transform: scale(1.1);
-    cursor: pointer;
-}
+
 .tech-stack{                                    /*this is for techstack*/
     margin-top: 100px;
     height: 550px;
@@ -141,8 +168,8 @@ nav, ul{                    /*this is for navigation list in the header*/
     color: rgb(214, 212, 212);
     transition-duration: 0.5s;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 12px rgba(123, 44, 191, 0.5),
-                0 2px 4px rgba(123, 44, 191, 0.3);
+    box-shadow: 0 6px 12px rgba(2, 95, 138, 0.5),
+                0 2px 4px rgba(1, 25, 36, 0.3);
     border-radius: 12px;
 }
 .techstack-item:hover{                              /*this is related to techstack*/
@@ -171,6 +198,7 @@ nav, ul{                    /*this is for navigation list in the header*/
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
     border-radius: 10px;
+    background-color: #011018;
 }
 .links-icons-list{                                   /*this is related to my email and profile*/
     display: flex;
@@ -195,7 +223,7 @@ i:hover{                                            /*this is related to my emai
   padding: 0.75rem 2rem; /* same as px-5 py-3 */
   font-weight: 500;
   font-family: inherit;
-  color: #4f46e5; /* text-indigo-600 */
+  color: #29b3f3; /* text-indigo-600 */
   overflow: hidden;
   border-radius: 15px; /* rounded-full */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
@@ -203,7 +231,7 @@ i:hover{                                            /*this is related to my emai
   transition: all 0.3s ease-out;
 }
 .gradient-button:hover {                                 /*this is related to my email and profile*/
-  box-shadow: 0 0 0 3px #652a9c; /* hover:ring-purple-500 */
+  box-shadow: 0 0 0 3px #014c77; /* hover:ring-purple-500 */
 }
 /* Background gradient layer */
 .gradient-button .bg-layer {                                     /*this is related to my email and profile*/
@@ -211,7 +239,7 @@ i:hover{                                            /*this is related to my emai
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, #9341db, #4d0a8b, #000000);
+  background: linear-gradient(to bottom right, #2db7e0, #036186, #00161d);
   z-index: 1;
 }
 /* Rotating circle element */
@@ -223,7 +251,7 @@ i:hover{                                            /*this is related to my emai
   height: 16rem; /* h-64 */
   margin-bottom: 8rem; /* mb-32 */
   margin-right: 1rem; /* mr-4 */
-  background-color: #7b2cbf; /* bg-pink-500 */
+  background-color: #2c89bf; /* bg-pink-500 */
   border-radius: 50%;
   opacity: 0.3;
   transform-origin: bottom left;
@@ -257,7 +285,7 @@ i:hover{                                            /*this is related to my emai
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #111111;
+    background-color: #011018;
 }
 .about-image{                                               /*related to about*/
     height: 500px;
@@ -278,7 +306,7 @@ i:hover{                                            /*this is related to my emai
 .about-heading{                                                         /*related to about*/
     font-family: "Merriweather", Alan Sans;
     font-style: italic;
-    color:#9341db
+    color:#05a3be;
 }
 .about-heading-two{                                             /*related to about*/
     color: white;
@@ -289,4 +317,44 @@ i:hover{                                            /*this is related to my emai
     width: 470px;
     font-weight: 600;
     font-size: 17px;
+}
+
+.projects{
+    height: 1300px;
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.projects-heading{
+    height: 80px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-heading h2{
+    color: rgb(214, 212, 212);
+    font-size: 40px;
+}
+.projects-main{
+    height: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.project-item{
+    height: 330px;
+    width: 600px;
+    background-color: #011018;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
+    /* border-radius: 10px; */
 }
