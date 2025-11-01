@@ -88,7 +88,7 @@ header{                 /*this is for header*/
 }
 .introduction{                  /*this is for the introduction*/
     margin-top: 80px;
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -96,7 +96,7 @@ header{                 /*this is for header*/
     align-items: center;
 }
 .introduction-details{              /*this is related to introduction*/
-    height: 340px;
+    height: 290px;
     width: 900px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
@@ -119,7 +119,7 @@ header{                 /*this is for header*/
     color: rgb(214, 212, 212);
 }
 .introduction-image{                                 /*this is related to introduction*/
-    height: 340px;
+    height: 290px;
     width: 310px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
@@ -290,9 +290,11 @@ i:hover{                                            /*this is related to my emai
 .about-image{                                               /*related to about*/
     height: 500px;
     width: 540px;
-    background-image: url(./images/zohaib.jpg);
-    border-radius: 25px;
+    background-image: url(./images/image6.JPG);
+    border-radius: 27px;
     background-repeat: no-repeat;
+    
+    
 }
 .about-details{                                                         /*related to about*/
     height: 450px;
@@ -307,6 +309,7 @@ i:hover{                                            /*this is related to my emai
     font-family: "Merriweather", Alan Sans;
     font-style: italic;
     color:#05a3be;
+    font-size: xx-large;
 }
 .about-heading-two{                                             /*related to about*/
     color: white;
@@ -315,7 +318,7 @@ i:hover{                                            /*this is related to my emai
     text-align: justify;
     height: 300px;
     width: 470px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 17px;
 }
 
