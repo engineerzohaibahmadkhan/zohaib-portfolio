@@ -195,6 +195,7 @@ header{                 /*this is for header*/
     box-shadow: 0 6px 12px rgba(2, 95, 138, 0.5),
                 0 2px 4px rgba(1, 25, 36, 0.3);
     border-radius: 12px;
+    background-color: #011018;
 }
 .techstack-item:hover{                              /*this is related to techstack*/
     transform: scale(1.1);
