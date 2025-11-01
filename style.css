@@ -133,6 +133,30 @@ header{                 /*this is for header*/
     background-size: cover;
 }
 
+.hr-neon {
+  border: 0;
+  width: 90%; /* 👈 makes the line 90% width */
+  margin: 20px auto; /* 👈 centers it horizontally */
+  height: 0.7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgb(6, 236, 110) 0%, rgb(1, 39, 46) 50%, rgb(4, 118, 163) 100%);
+  box-shadow: 0 0 12px rgba(74, 249, 255, 0.5), inset 0 0 8px rgba(5, 185, 240, 0.2);
+  position: relative;
+  overflow: visible;
+  animation: neonPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%,100% {
+    filter: brightness(0.95) saturate(0.95);
+    transform: scaleX(1);
+  }
+  50% {
+    filter: brightness(1.2) saturate(1.1);
+    transform: scaleX(1.02);
+  }
+}
+
 .tech-stack{                                    /*this is for techstack*/
     margin-top: 100px;
     height: 550px;
@@ -206,12 +230,12 @@ header{                 /*this is for header*/
     align-items: center;
     list-style: none;
 }
-i{                                                   /*this is related to my email and profile*/
+.links-icons i{                                                   /*this is related to my email and profile*/
     font-size: 45px;
     color: #9e9d9d;
     transition-duration: 0.5s;
 }
-i:hover{                                            /*this is related to my email and profile*/
+.links-icons i:hover{                                            /*this is related to my email and profile*/
     color: white;
     transform: scale(1.1);
 }
@@ -322,7 +346,7 @@ i:hover{                                            /*this is related to my emai
     font-size: 17px;
 }
 
-.projects{
+.projects{                  /*this is the projects area*/
     height: 1300px;
     width: 100%;
     margin-top: 4rem;
@@ -332,18 +356,18 @@ i:hover{                                            /*this is related to my emai
     flex-direction: column;
     gap: 1rem;
 }
-.projects-heading{
+.projects-heading{              /*related to projects*/
     height: 80px;
     width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.projects-heading h2{
+.projects-heading h2{                    /*related to projects*/
     color: rgb(214, 212, 212);
     font-size: 40px;
 }
-.projects-main{
+.projects-main{                          /*related to projects*/
     height: 1100px;
     width: 100%;
     display: grid;
@@ -353,7 +377,7 @@ i:hover{                                            /*this is related to my emai
     align-items: center;
 }
 
-.project-item{
+.project-item{                               /*related to projects*/
     height: 330px;
     width: 600px;
     background-color: #011018;
@@ -361,3 +385,125 @@ i:hover{                                            /*this is related to my emai
     box-shadow: 1px 1px 7px rgb(255, 255, 255, 0.3);
     /* border-radius: 10px; */
 }
+
+.contact{                                       /*this is contacts informations and links*/
+    height: 300px;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2px;
+    gap: 3rem;
+}
+.contact-items1{ 
+    margin-left: 5rem;                                       /*related to contacts*/
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-items1 h2{                                                             /*related to contacts*/
+    color: rgb(255, 196, 0);
+    font-size: 30px;
+}
+.contact-items1 p{
+    color: rgb(214, 212, 212);
+    font-style: italic;
+    font-size: large;
+}
+.contact-icons-list{                                     /*related to contacts*/
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.contact-icons i{                                      /*related to contacts*/
+    font-size: 30px;
+    color: #29b3f3;
+}
+
+.contact-icons i:hover{
+    color: white;
+}
+
+.contact-items2{                                 /*related to contacts*/
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-items2 h2{
+    color: rgb(255, 196, 0);
+    font-size: 30px;
+}
+
+.contact-items2 p{
+    color: rgb(214, 212, 212);
+    font-style: italic;
+    font-size: large;
+}
+
+.contact-items2 a{
+    color: #29b3f3;
+}
+
+.contact-items2 a.contact-items2-link:hover{
+    color: #0571af;
+}
+
+.contact-items2 a.contact-items2-link:active{
+    color: #7b2cbf;
+}
+
+.contact-items2 a.whatsapp-btn {
+    color: rgb(196, 151, 3);
+    text-decoration: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #29b3f3;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(45, 183, 224, 0.4);
+    transition: all 0.3s ease;
+}
+
+.contact-items2 a.whatsapp-btn:hover {
+  background-color: #0571af; /* WhatsApp green on hover */
+  box-shadow: 0 1px 3px rgba(1, 184, 190, 0.5);
+}
+
+footer{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-contents-div{
+    height: 70px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(214, 212, 212);
+}
+
+.footer-contents-div ul,li{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.footer-contents-div a.fcd-links{
+    text-decoration: none;
+}
+
+
